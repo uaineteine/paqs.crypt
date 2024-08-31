@@ -53,5 +53,15 @@ namespace paqs.crypt
                 }
             }
         }
+        public static byte[] GenerateRandomIV()
+        {
+            using (var aes = new AesManaged())
+            {
+                aes.KeySize = 256;
+                aes.BlockSize = 128;
+                aes.GenerateIV();
+                return aes.IV;
+            }
+        }
     }
 }
