@@ -1,7 +1,9 @@
 ﻿using System.Security.Cryptography;
+using System.Text;
 
 namespace paqs.crypt
 {
+
     public class AesEncryption
     {
         public static byte[] Encrypt(byte[] data, string password, byte[] salt, byte[] iv)
@@ -62,6 +64,26 @@ namespace paqs.crypt
                 aes.GenerateIV();
                 return aes.IV;
             }
+        }
+
+        public static byte[] HashSalt(string maskedsalt)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                return sha256.ComputeHash(Encoding.UTF8.GetBytes(maskedsalt));
+            }
+        }
+
+        public static byte[] EncryptWithSha256Salt(byte[] data, string password, byte[] iv)
+        {
+            var salt = HashSalt(password);
+            return Encrypt(data, password, salt, iv);
+        }
+
+        public static byte[] DecryptWithSha256Salt(byte[] encryptedData, string password, byte[] iv)
+        {
+            var salt = HashSalt(password);
+            return Decrypt(encryptedData, password, salt, iv);
         }
     }
 }
