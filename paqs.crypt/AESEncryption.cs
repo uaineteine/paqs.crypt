@@ -3,7 +3,6 @@ using System.Text;
 
 namespace paqs.crypt
 {
-
     public class AesEncryption
     {
         public static byte[] Encrypt(byte[] data, string password, byte[] salt, byte[] iv)
