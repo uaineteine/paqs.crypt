@@ -15,9 +15,14 @@
     <Description>A .NET library provides functionalities to encrypt byte data</Description>
     <PackageProjectUrl>https://github.com/uaineteine/paqs.crypt</PackageProjectUrl>
     <RepositoryUrl>https://github.com/uaineteine/paqs.crypt</RepositoryUrl>
+    <PackageIcon>icon2.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\icon2.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
