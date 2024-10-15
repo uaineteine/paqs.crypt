@@ -5,8 +5,27 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Copyright>Daniel Stamer-Squair 2024</Copyright>
-    <AssemblyVersion>0.2</AssemblyVersion>
-    <FileVersion>0.2</FileVersion>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <FileVersion>1.0</FileVersion>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Title>Paqs.Crypt</Title>
+    <Authors>Daniel Stamer-Squair</Authors>
+    <Company>Daniel Stamer-Squair</Company>
+    <Description>A .NET library provides functionalities to encrypt byte data</Description>
+    <PackageProjectUrl>https://github.com/uaineteine/paqs.crypt</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/uaineteine/paqs.crypt</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
